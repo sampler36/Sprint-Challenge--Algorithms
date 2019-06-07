@@ -18,3 +18,12 @@ b) sum = 0   #O(1)
             sum++   
 
 For all of the nested for loops you multiply their time complexities to get O(n) * O(n) * O(n) * O(n) * O(1) = O(n^4). This dominates O(1) from the first line, O(n^4) becomes the overall time complexity.
+
+
+c)  def bunnieEars(bunnies)
+      if bunnies == 0:
+        return 0
+      return 2 + bunnieEars(bunnies-1)
+
+This function calls itself and it equates the input to the output so the time complexity is O(n).
+
