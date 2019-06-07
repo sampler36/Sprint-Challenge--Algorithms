@@ -14,10 +14,10 @@ b) sum = 0   #O(1)
     for (i = 0; i < n; i++)    #O(n)   
       for (j = i + 1; j < n; j++)    #O(n)
         for (k = j + 1; k < n; k++)      #O(n)
-          for (l = k + 1; l < 10 + k; l++)  #O(n)
+          for (l = k + 1; l < 10 + k; l++)  #O(1)
             sum++   
 
-For all of the nested for loops you multiply their time complexities to get O(n) * O(n) * O(n) * O(n) * O(1) = O(n^4). This dominates O(1) from the first line, O(n^4) becomes the overall time complexity.
+For all of the nested for loops you multiply their time complexities to get O(n) * O(n) * O(n) * O(1) * O(1) = O(n^3). This dominates O(1) from the first line, O(n^3) becomes the overall time complexity.
 
 
 c)  def bunnieEars(bunnies)
