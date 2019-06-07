@@ -27,3 +27,22 @@ c)  def bunnieEars(bunnies)
 
 This function calls itself and it equates the input to the output so the time complexity is O(n).
 
+
+Excersice II 
+a) _n_story = x
+   _f_ = 
+   if _f_ is higher hence the number 
+   of eggsdropped is  minimized
+   lets say x is room/floor (f) this means f is the safe heaven
+   if f < / <= currentfloor return safe drop
+   else return egg broken and vise vessa
+  
+def eggs_drop(n, floor):
+    if floor >= f:
+      print("eggs drops")
+      floor = f//2
+    else:
+      print("eggs are safe")
+      return floor
+
+Using binary search means we splitting the search in 2s everytime we try to find the safer room which is less or equal to f. So f will be our middle index [] and time complexity would be O(log(n)) 
