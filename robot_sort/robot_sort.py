@@ -104,7 +104,7 @@ class SortingRobot:
         # if we have an item check if its less or greater than / compare
         # if less then swap
         # else repeat
-        # more like  the robot is doing Binary stuff
+        # more like  the robot is comparing what is in its hand then sort it 
         self.swap_item()  # set the item to 0 on go
         while(True == True):
             self.set_light_off()
