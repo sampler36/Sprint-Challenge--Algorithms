@@ -99,17 +99,39 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        # from 0 
-        # check if we have an item 
+        # from 0
+        # check if we have an item
         # if we have an item check if its less or greater than whats on the floor / compare
-        # if less then swap 
-        # else repeat 
-    
-        pass
-        # pick the first item
-        self.swap_item()
-      
-
+        # if less then swap
+        # else repeat
+        # 
+        self.swap_item() # set the item to 0 on go
+        while(True == True):
+            self.set_light_off()
+            while(self.can_move_right() == True):
+                self.move_right()
+                # if robot sees item then compare if its less 
+                # than 0 or what the robot is holding
+                if(self.compare_item() == 1):
+                    # swap
+                    self.swap_item()
+                    self.set_light_on()
+                # go back and replace item the robot holding
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+                self.swap_item()
+            # put last item down 
+            self.swap_item()
+            # if nothing happens then we break / the loop ends
+            if(self.light_is_on() == False):
+                break
+            # else start again / 0
+            while(self.can_move_left()):
+                self.move_left()
+            # pick up 1st item
+            self.swap_item()
+                  
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
